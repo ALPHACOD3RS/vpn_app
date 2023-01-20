@@ -29,3 +29,9 @@ List imag = [
   "images/canada.png",
   "images/japan.png"
 ];
+
+List pre = [
+  "Unlock over 100+ countrys",
+  "Unlock over 4000+ citys",
+  "View more than 1000 tips",
+];

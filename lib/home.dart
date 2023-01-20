@@ -1,4 +1,5 @@
 import 'package:day1/lists.dart';
+import 'package:day1/prem.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/src/widgets/framework.dart';
 import 'package:flutter/src/widgets/placeholder.dart';
@@ -24,8 +25,11 @@ class _HomeState extends State<Home> {
       appBar: AppBar(
         backgroundColor: const Color(0xff141a3c),
         elevation: 0,
-        leading: const Icon(
-          Icons.arrow_back_ios_new_outlined,
+        leading: GestureDetector(
+          onTap: () {},
+          child: Icon(
+            Icons.arrow_back_ios_new_outlined,
+          ),
         ),
         title: Text(
           "All Locations",
@@ -124,7 +128,7 @@ class _HomeState extends State<Home> {
                     // onPrimary: Colors.black87,
                     // primary: Colors.grey[300],
                     // minimumSize: Size(88, 36),
-                    backgroundColor: Colors.amberAccent,
+                    backgroundColor: Color.fromARGB(120, 39, 62, 190),
                     //foregroundColor: Colors.amberAccent,
                     // primary: Colors.red,
                     padding: EdgeInsets.symmetric(horizontal: 16),
@@ -132,7 +136,13 @@ class _HomeState extends State<Home> {
                       borderRadius: BorderRadius.all(Radius.circular(18)),
                     ),
                   ),
-                  onPressed: null,
+                  onPressed: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                          builder: (context) => const PremiumPage()),
+                    );
+                  },
                   child: Text(
                     "View Plan",
                     style: GoogleFonts.nunito(
@@ -142,7 +152,7 @@ class _HomeState extends State<Home> {
                       ),
                     ),
                   ),
-                )
+                ),
                 //TextButton(onPressed: null, child: Text("View Plan"))
               ],
             ),
